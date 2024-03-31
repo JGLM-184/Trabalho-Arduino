@@ -2,7 +2,7 @@
 
 Trabalho desenvolvido em conjunto das disciplinas Laboratório de Hardware e Algoritmos e Lógica de Programação
 
-Desenvolver um circuito com Arduino utilizando o site Tinkercad juntamente com linguagem C, apresentando o objetivo do tema/ideia escolhida, aprimorando a habilidade de lógica de programação
+Desenvolver um circuito com Arduino utilizando o site Tinkercad juntamente com linguagem C++, apresentando o objetivo do tema/ideia escolhida, aprimorando a habilidade de lógica de programação
 
 
 Escolha:
