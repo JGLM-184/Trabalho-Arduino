@@ -1,0 +1,63 @@
+#include <Servo.h>
+
+int pos = 0;
+
+Servo servo_9;
+
+int counter;
+
+int counter2;
+
+int counter3;
+
+void setup()
+{
+  servo_9.attach(9, 500, 2500);
+}
+
+void loop()
+{
+  // Primeira refeição do dia, servo gira 2 vezes
+  for (counter = 0; counter < 5; ++counter) {
+    for (pos = 0; pos <= 30; pos += 1) {
+      // Pos é uma variável que contará até 30
+      // 30 será dado aos graus que o servo girará
+      servo_9.write(pos);
+      delay(15); // Wait for 15 millisecond(s)  (PODE SER ALTERADO)
+    }
+    for (pos = 30; pos >= 0; pos -= 1) {
+      // Contagem regressiva para voltar à posição
+      // inicial
+      // servo gira 30 graus para trás
+      servo_9.write(pos);
+      delay(15); // Wait for 15 millisecond(s) (PODE SER ALTERADO)
+    }
+  }
+  // Aguarda 6 horas até a próx refeição
+  delay(6000); // Wait for 6000 millisecond(s) (PODE SER ALTERADO)
+  // Repete para a segunda refeição
+  for (counter2 = 0; counter2 < 5; ++counter2) {
+    for (pos = 0; pos <= 30; pos += 1) {
+      servo_9.write(pos);
+      delay(15); // Wait for 15 millisecond(s) (PODE SER ALTERADO)
+    }
+    for (pos = 30; pos >= 0; pos -= 1) {
+      servo_9.write(pos);
+      delay(15); // Wait for 15 millisecond(s) (PODE SER ALTERADO)
+    }
+  }
+  delay(6000); // Wait for 6000 millisecond(s) (PODE SER ALTERADO)
+  // Repete para a última refeição
+  for (counter3 = 0; counter3 < 5; ++counter3) {
+    for (pos = 0; pos <= 30; pos += 1) {
+      servo_9.write(pos);
+      delay(15); // Wait for 15 millisecond(s) (PODE SER ALTERADO)
+    }
+    for (pos = 30; pos >= 0; pos -= 1) {
+      servo_9.write(pos);
+      delay(15); // Wait for 15 millisecond(s) (PODE SER ALTERADO)
+    }
+  }
+  // Aguardar 12h para a refeição do dia seguinte
+  delay(12000); // Wait for 12000 millisecond(s) (PODE SER ALTERADO)
+}
